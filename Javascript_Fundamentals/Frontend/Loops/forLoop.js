@@ -65,3 +65,9 @@ for (let i=1; i<=10; i++){
     }
     console.log("-----------------------");
 }
+
+// multiplication table pf user's choice
+let num = Number(prompt("Enter a Number: "));
+for (i=1; i<=12; i++){
+    console.log(num,"x",i,"=",num*i);
+}
