@@ -19,3 +19,18 @@ function isEven(num) {
 
 console.log(isEven(8));  
 console.log(isEven(15));  
+
+//vowel counter
+
+function countVowels(str){
+    //"cookie", count=4
+    let count=0;
+    for(const char of str){
+        if(char==="a" || char==="e" || char==="i" || char==="o" || char==="u"){
+            count++;
+        }
+    }
+    console.log(count);
+}
+let str=String(prompt("Enter the word: "));
+countVowels(str);
