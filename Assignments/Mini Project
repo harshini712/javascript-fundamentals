@@ -1,0 +1,48 @@
+console.log("Student's Result: ");
+
+let marks = [88, 38, 78, 82, 82];
+console.log("Subjects: ", marks);
+let total = 0;
+
+
+let result = true;
+for ( i=0; i<marks.length; i++){
+    total += marks[i];
+    if (marks[i]< 35){
+        result= false;
+    }
+}
+console.log("Total: ", total);
+
+let average = total/marks.length;
+let percentage = average;
+
+console.log("Average: ", average);
+console.log("Percentage: ",percentage,"%");
+
+if (result !== true){
+    console.log("Grade: F");
+} else if (percentage >= 91) {
+    console.log("Grade: A+");
+} else if (percentage >= 81) {
+    console.log("Grade: A");
+} else if (percentage >= 71) {
+    console.log("Grade: B+");
+} else if (percentage >= 61) {
+    console.log("Grade: B");
+} else if (percentage >= 51) {
+    console.log("Grade: C+");
+} else if (percentage >= 41) {
+    console.log("Grade: C");
+} else if (percentage >= 35) {
+    console.log("Grade: D");
+} else {
+    console.log("Grade: F");
+}
+
+    
+if (result){
+    console.log("Result: Pass");
+} else { 
+    console.log("Result: Fail");
+}
