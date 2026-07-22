@@ -1,0 +1,18 @@
+let customerType = Number(prompt(
+`1. Domestic
+2. Commercial
+3. Industrial
+Enter your choice: `));
+     
+let unitsConsumed = Number(prompt("Enter number of units consumed: "));
+
+switch (customerType){
+    case 1:
+        console.log("Electricty bill: ", unitsConsumed*6);
+        break;
+    case 2: 
+        console.log("Electricity bill: ", unitsConsumed*9);
+        break;
+    case 3: 
+        console.log("Electricity bill: ", unitsConsumed*7);
+}

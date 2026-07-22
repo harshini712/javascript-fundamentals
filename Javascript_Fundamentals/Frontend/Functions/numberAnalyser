@@ -1,0 +1,66 @@
+let arr = [12, 5, 9, 18, 7, 20];
+
+function largest(arr) {
+    let max = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+
+    return max;
+}
+
+function smallest(arr) {
+    let min = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min)
+            min = arr[i];
+    }
+
+    return min;
+}
+
+function sum(arr) {
+    let total = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i];
+    }
+
+    return total;
+}
+
+function average(arr) {
+    return sum(arr) / arr.length;
+}
+
+function evenCount(arr) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0)
+            count++;
+    }
+
+    return count;
+}
+
+function oddCount(arr) {
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0)
+            count++;
+    }
+
+    return count;
+}
+
+console.log("Largest:", largest(arr));
+console.log("Smallest:", smallest(arr));
+console.log("Sum:", sum(arr));
+console.log("Average:", average(arr));
+console.log("Even Count:", evenCount(arr));
+console.log("Odd Count:", oddCount(arr));

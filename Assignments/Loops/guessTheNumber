@@ -1,0 +1,31 @@
+// Guess the Number
+// Generate or define a target number.
+// Continuously ask the user to guess the number using a while loop.
+// Display hints such as "Too High" or "Too Low" until the correct number is guessed.
+
+let targetNum = 26;
+let guessedNum = 0;
+
+while (guessedNum != targetNum){
+    guessedNum = Number(prompt("Guess the number between 1 to 50: "));
+    
+    if (guessedNum === targetNum){
+        console.log("Correct! You guessed it right");
+    }else if (guessedNum>50){
+        console.log("Enter a valid number between 1 to 50");
+    }else if (guessedNum > targetNum + 10){
+        console.log("Too High");
+    }else if (guessedNum < targetNum - 10){
+        console.log("Too Low");
+    }else if (guessedNum>=targetNum-2 && guessedNum <targetNum){
+        console.log("You are close. Try a little higher!");
+    }else if (guessedNum<=targetNum+2 && guessedNum>targetNum){
+        console.log("You are close. Try a little lower!");
+    }else if (guessedNum>=targetNum-5 && guessedNum<=targetNum+5){
+        console.log("You are within 5 numbers!")
+    }else{
+        console.log("Keep trying!");
+    }
+    
+} 
+

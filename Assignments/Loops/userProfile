@@ -1,0 +1,59 @@
+let password = "1207";
+let num = (prompt("Enter your password: "));
+while (num !== password){
+   console.log("Incorrect password entered, please try again");
+  num = (prompt("Enter a password: "));
+}
+console.log("Login successful!");
+let choice; 
+do{
+    choice = Number(prompt(
+`1. View Profile
+2.Change Password
+3. Logout
+Choose an option: `));
+    
+switch (choice){
+
+case 1:
+let name = "Harshini";
+let age = 19;
+let email = "harshiniregu@gmail.com";
+
+console.log(`----- Profile Details -----
+Name: ${name}
+Age: ${age}
+Email: ${email}`)
+break;
+
+case 2: 
+            {
+            let check = (prompt("Enter your previous password: "));
+            
+            while (check !== password){
+                console.log("Incorrect password entered, please try again.")
+                check = (prompt("Enter your previous password: "));
+            }
+           
+            password = (prompt("Enter a new password: "));
+            
+            console.log("Password changed successfully.. please log in again!");
+             
+            num = (prompt("Enter your password: "));
+            
+            while (num !== password){
+                console.log("Incorrect password entered, please try again");
+                num = (prompt("Enter a password: "));
+            } 
+            console.log("Login Successful!");
+            break;
+            }
+        
+case 3:
+            console.log("Logged out successfully!");
+            break;
+        deafult:
+        console.log("Please enter a valid option");
+    
+}
+}while (choice !== 3);

@@ -1,0 +1,63 @@
+
+let choice;
+let balance = 1000;
+
+function deposit(balance){
+    let depositAmount = Number(prompt("Enter the amount you want to deposit: "));
+        balance += depositAmount;
+        console.log("Your action is successful!")
+        console.log("Updated Balance: ", balance);
+        return balance;
+}
+function withdrawl(balance){
+    let withdrawlAmt = Number(prompt("Enter the amount you want to withdraw: "));
+    
+    while(withdrawlAmt > balance){
+        console.log("Insufficient Balance!")
+        withdrawlAmt = Number(prompt("Enter a valid amount: "));
+    } 
+        balance -= withdrawlAmt;
+        console.log("Your action is successful!");
+        console.log("Updated Balance: ", balance);
+        
+        return balance;
+}
+
+function checkBalance(balance){
+    console.log("Current Balance: ", balance);
+    return balance;
+}
+
+function exit(balance){
+    console.log("Thankyou, Please visit again soon!");
+    return balance;
+}
+do{
+    choice = Number(prompt(
+        "ATM Menu\n"+
+        "1. Check Balance\n"+
+        "2. Deposit\n"+
+        "3. Withdraw\n"+
+        "4. Exit\n"+
+        "Please enter your choice: "));
+        
+    switch(choice){
+    case 1:
+        balance = checkBalance(balance);
+        break;
+    case 2:
+        balance = deposit(balance);
+        break;
+    case 3:
+        balance = withdrawl(balance);
+        break;
+    case 4:
+        balance = exit(balance);
+        break;
+        
+    default:
+    console.log("Please enter a valid choice");
+        
+    }
+}
+while (choice!==4);

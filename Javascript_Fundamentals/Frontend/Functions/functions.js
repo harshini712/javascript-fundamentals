@@ -27,7 +27,7 @@ greet(); */
 
 
 
-// welcome to js
+// welcome to js return values
 function Welcome(){
     return "welcome to Javascript!";
 }
@@ -39,13 +39,16 @@ console.log(welcome());
 
 function countVowels(str){
     //"cookie", count=4
+    let count =0;
     for(const char of str){
-        if(char==="a" || char==="e" || char==="i" || char==="o" || char==="u"){
+        const cha = char.toLowerCase();
+        if(cha==="a"|| cha==="e" || cha==="i" || cha==="o" || cha==="u"){
             count++;
         }
     }
-    return count;
+   return(count) ;
 }
+console.log(countVowels("cookies and cream"));
 
 //studentDetails
 
@@ -60,3 +63,61 @@ return student;
 console.log(studentDetails());
     
 
+// greet(name)
+
+function greet(){
+    return(`Hi, ${name}!`);
+}
+let name = "Harshini";
+console.log(greet(name));
+
+// function greet(name){
+//     return "Hello "+ name+ "!";
+// }
+
+// console.log(greet("PRATYUSH"));
+
+// console.log(greet("Sreeja"));
+
+
+
+//addition of two numbers
+
+let add = function(num1, num2){
+    return (num1 + num2);
+}
+console.log(add(6,7));
+
+// function add(a, b){
+//     return (a+b)
+// }
+// let a = 8;
+// let b =10
+// console.log(add(a, b))
+
+
+//even number finder
+
+function isEven(num){
+    if (num % 2==0){
+    return "True";
+    } else {
+        return "False";
+    }
+}
+console.log(isEven(12810726));
+
+//square of a num
+function square(num){
+    return (num*num);
+}
+console.log(`Square of num : ${square(7)}`);
+
+
+//to uppercase 
+
+function toUpper(str) {
+    return str.toUpperCase();
+}
+
+console.log(toUpper("hello"));
