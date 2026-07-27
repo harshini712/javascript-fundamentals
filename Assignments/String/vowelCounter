@@ -1,0 +1,32 @@
+let str = "Beautiful";
+
+function countVowels(str){
+    let count1=0;
+    str = str.toLowerCase();
+    for (i in str){
+        let char = str [i];
+        if (char === "a"|| char === "e"||char ==="i"|| char === "o"|| char === "u"){
+            count1++
+        }
+        
+    }
+    return count1;
+}
+countVowels(str);
+
+function countConsonants(str){
+    let count2=0;
+    str = str.toLowerCase();
+    for (i in str){
+        let char = str [i];
+        if (char !== "a"&& char !== "e"&&char !=="i"&& char !== "o"&& char !== "u"){
+            count2++
+        }
+        
+    }
+    return count2;
+}
+countConsonants(str);
+
+console.log("Number of vowels: ",countVowels(str))
+console.log("Number of consonants: ", countConsonants(str))

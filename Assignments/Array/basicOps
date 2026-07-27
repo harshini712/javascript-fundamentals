@@ -1,0 +1,46 @@
+const marks = [65, 82, 45, 90, 70, 55];
+
+function totalMarks(arr) {
+    let total = 0;
+
+    for (let mark of arr) {
+        total += mark;
+    }
+
+    return total;
+}
+
+function averageMarks(arr) {
+    return totalMarks(arr) / arr.length;
+}
+
+// Highest Mark
+function highestMark(arr) {
+    let highest = arr[0];
+
+    for (let mark of arr) {
+        if (mark > highest) {
+            highest = mark;
+        }
+    }
+
+    return highest;
+}
+
+// Lowest Mark
+function lowestMark(arr) {
+    let lowest = arr[0];
+
+    for (let mark of arr) {
+        if (mark < lowest) {
+            lowest = mark;
+        }
+    }
+
+    return lowest;
+}
+
+console.log("Total:", totalMarks(marks));
+console.log("Average:", averageMarks(marks));
+console.log("Highest:", highestMark(marks));
+console.log("Lowest:", lowestMark(marks));

@@ -57,6 +57,10 @@ function viewStudents(){
         i++;
     }
 }
+/**
+ * == 5 "5"
+ * ===
+ */
 
 function searchStudent(){
     let name = prompt("Enter the student's name to search: ");

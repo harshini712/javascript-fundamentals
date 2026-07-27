@@ -1,0 +1,72 @@
+//find the length of the string
+
+let string = "Javascript";
+
+console.log(string.length)
+
+//number of vowels
+
+let str = "Beautiful";
+let count=0;
+
+function countVowels(str){
+    str = str.toLowerCase();
+    for (i in str){
+        let char = str [i];
+        if (char === "a"|| char === "e"||char ==="i"|| char === "o"|| char === "u"){
+            count++
+        }
+        
+    }
+}
+countVowels(str);
+console.log(count)
+
+//print all letters of the string
+let string1 = "Coding";
+for (i in string1){
+    console.log(string1[i])
+}
+
+//uppercase letters
+let stri = "JaVaScRiPt";
+let count1 = 0;
+
+for (let i in str){
+    let char = stri [i];
+    if (char>= "A" && char <="Z"){
+        count1++
+    }
+}
+console.log(count1)
+
+//reverse a string
+
+let strin = "OpenAI";
+let reverse = "";
+for (let i=strin.length-1; i>=0; i--){
+    reverse = reverse + strin[i]
+}
+console.log(reverse)
+
+
+//palindrome check
+let string2 = "malayalam";
+let palindrome;
+let reversed = string2.split("").reverse("").join("");
+if (string2 === reversed){
+    palindrome = true;
+}else {
+    palindrome = false;
+}
+console.log(palindrome)
+
+//digit counter
+let string3 = "abc123xyz45";
+let count = 0;
+for (let ch of string3){
+    if (ch>="0" && ch <=9 ){
+        count++
+    }
+}
+console.log(count)

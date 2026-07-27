@@ -1,0 +1,57 @@
+//arrName => ["Harshini", "Pratyush", "Sreeja", "Renuka", "Praneeth", "Bulli"]
+let marks = [97, 82, 74, 66, 86, 56]
+
+//console.log(arrName)=> to print the values of array
+console.log(marks)
+
+//console.log(arrName.length)=> to print the length of an array
+console.log(marks.length)
+
+//console.log(type of arrName)=> to know the data type of an array
+console.log(typeof marks)
+
+//console.log(arrName[index])=> to retreive a value of an index in an array
+console.log(marks)
+
+//arrName.length = 0-5 indices, so when we try to access 6th index it shows UNDEFINED
+console.log(marks[6])
+
+//to update any index in array, because arrays are mutable
+marks[3]=53
+console.log(marks)
+
+//will print the updated value 
+console.log(`${marks[3]}
+---------------------`)
+
+//to print the arrName elements individually using for loop
+for(i=0; i<marks.length; i++){
+    console.log(marks[i])
+}
+
+console.log("-----------------------------")
+//for of loop
+for(let mark of marks){
+    console.log(marks)
+}
+
+//use .toUpperCase to rewrite the array values in uppercase 
+
+// 
+let num = [3,2,7,6,5]
+
+num.forEach((element)=>{
+    console.log(element**2)
+})
+
+let name = "Harshini"
+let arr = Array.from(name)
+console.log(arr)
+
+for (let i of num){
+console.log(i)
+}
+
+for (let i in num){
+    console.log(num[i])
+}

@@ -1,0 +1,8 @@
+let str = "malayalam";
+let reverse = str.split(" ").reverse("").join("")
+
+if(str = reverse){
+    console.log(true,",", str, "is a palindrome")
+}else{
+    console.log(false,",", str, "is not a palindrome")
+}

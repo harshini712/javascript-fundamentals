@@ -57,3 +57,27 @@ const num2 = Number(prompt("Enter the second number: "));
 const sum = num1+num2;
 
 console.log(`Sum of ${num1} and ${num2} is: ${sum}`);
+
+//swap variable
+let a=8;
+let b=6;
+let temp;
+
+temp = a;
+a =b;
+b=temp;
+
+console.log("Value of a: ", a);
+console.log("Value of b: ", b);
+
+//arithmetic oper
+
+let a=3;
+let b=6;
+
+a= a+b;
+b=a-b;
+a=a-b;
+
+console.log(a);
+console.log(b);

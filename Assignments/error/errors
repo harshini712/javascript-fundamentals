@@ -1,28 +1,21 @@
-<--- Last few GCs --->
-
-[494:0x1303a000]     1632 ms: Mark-Compact 544.1 (552.8) -> 328.0 (336.7) MB, pooled: 0 MB, 256.48 / 0.00 ms  (average mu = 0.553, current mu = 0.524) allocation failure; scavenge might not succeed
-[494:0x1303a000]     2418 ms: Mark-Compact 814.2 (822.9) -> 489.3 (498.8) MB, pooled: 0 MB, 379.54 / 0.00 ms  (average mu = 0.530, current mu = 0.518) allocation failure; scavenge might not succeed
-
-
-<--- JS stacktrace --->
 
 FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
------ Native stack trace -----
 
- 1: 0xe40d2e node::OOMErrorHandler(char const*, v8::OOMDetails const&) [node]
- 2: 0x12167b0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]
- 3: 0x1216a87 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]
- 4: 0x1444365  [node]
- 5: 0x145dbf9 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]
- 6: 0x14322a8 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
- 7: 0x14331d5 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]
- 8: 0x140b5ce v8::internal::Factory::AllocateRaw(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [node]
- 9: 0x13f9c2c v8::internal::FactoryBase<v8::internal::Factory>::AllocateRawArray(int, v8::internal::AllocationType) [node]
-10: 0x13fa622 v8::internal::FactoryBase<v8::internal::Factory>::NewFixedArray(int, v8::internal::AllocationType) [node]
-11: 0x15d9f06  [node]
-12: 0x15da0bf  [node]
-13: 0x185aed6 v8::internal::Runtime_GrowArrayElements(int, unsigned long*, v8::internal::Isolate*) [node]
-14: 0x1dcb476  [node]
-Aborted
+// possible Errors: 
 
-=== Code Exited With Errors ===
+// syntax error
+// SyntaxError: Unexpected token ']'
+
+// Reference error
+// alert("Hello World!") ReferenceError: alert is not defined
+// ReferenceError: arr is not defined
+
+
+
+// Range error
+
+
+//TypeError: mark.toUpperCase is not a function
+
+// .map = ((n)=> n.price)
+// TypeError: Cannot set properties of undefined (setting 'map')
