@@ -1,0 +1,170 @@
+let employees = [
+    { name: "Praneeth", department: "IT", salary: 60000 },
+    { name: "Renuka", department: "HR", salary: 55000 },
+    { name: "Sreeja", department: "Finance", salary: 55000 },
+    { name: "Pratyush", department: "IT", salary: 60000 },
+    { name: "Harshini", department: "Marketing", salary: 55000 },
+];
+
+do {
+
+    choice = Number(prompt(
+        "1. Add Employee\n" +
+        "2. Search Employee by Name\n" +
+        "3. Update Employee Details\n" +
+        "4. Delete Employee\n" +
+        "5. Sort Employees\n" +
+        "6. Filter Employees by Department\n" +
+        "7. Count Employees in Each Department\n" +
+        "8. Exit\n\n" +
+        "Choose an option:"
+    ));
+
+    switch (choice) {
+        case 1:
+            addEmployee();
+            break;
+        case 2:
+            searchEmployee();
+            break;
+        case 3:
+            updateEmployee();
+            break;
+        case 4:
+            deleteEmployee();
+            break;
+        case 5:
+            sortEmployees();
+            break;
+        case 6:
+            filterDepartment();
+            break;
+        case 7:
+            countDepartment();
+            break;
+        case 8:
+            console.log("Exiting...");
+            break;
+
+        default:
+            console.log("Invalid Choice");
+    }
+
+} while (choice != 8);
+
+function addEmployee() {
+
+    let name = prompt("Enter Employee Name:");
+    let department = prompt("Enter Department:");
+    let salary = Number(prompt("Enter Salary:"));
+
+    employees.push({
+        name: name,
+        department: department,
+        salary: salary
+    });
+    console.log("Employee Added Successfully");
+}
+
+function searchEmployee() {
+
+    let name = prompt("Enter Employee Name:");
+
+    let employee = employees.find(emp =>
+        emp.name.toLowerCase() == name.toLowerCase()
+    );
+
+    if (employee) {
+        console.log(employee);
+    }
+    else {
+        console.log("Employee Not Found");
+    }
+}
+
+
+function updateEmployee() {
+
+    let name = prompt("Enter Employee Name:");
+
+    let employee = employees.find(emp =>
+        emp.name.toLowerCase() == name.toLowerCase()
+    );
+
+    if (employee) {
+
+        employee.department = prompt("Enter New Department:");
+        employee.salary = Number(prompt("Enter New Salary:"));
+
+        console.log("Employee Updated Successfully");
+    }
+    else {
+        console.log("Employee Not Found");
+    }
+}
+
+function deleteEmployee() {
+
+    let name = prompt("Enter Employee Name:");
+
+    let index = employees.findIndex(emp =>
+        emp.name.toLowerCase() == name.toLowerCase()
+    );
+
+    if (index != -1) {
+
+        employees.splice(index, 1);
+
+        console.log("Employee Deleted Successfully");
+    }
+    else {
+
+        console.log("Employee Not Found");
+    }
+}
+
+function sortEmployees() {
+
+    let option = Number(prompt(
+        "1. Sort by Name\n" +
+        "2. Sort by Salary"
+    ));
+
+    if (option == 1) {
+
+        employees.sort((a, b) =>
+            a.name.localeCompare(b.name)
+        );
+
+    }
+    else if (option == 2) {
+
+        employees.sort((a, b) =>
+            a.salary - b.salary
+        );
+    }
+
+    console.log(employees);
+}
+
+function filterDepartment() {
+
+    let dept = prompt("Enter Department:");
+
+    let result = employees.filter(emp =>
+        emp.department.toLowerCase() ==
+        dept.toLowerCase()
+    );
+
+    console.log(result);
+}
+
+function countDepartment() {
+    let count = employees.reduce((obj, emp) => {
+        obj[emp.department] = (obj[emp.department] || 0) + 1;
+        return obj;
+    }, {});
+    console.log(count);
+}
+
+   

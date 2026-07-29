@@ -70,3 +70,11 @@ for (let ch of string3){
     }
 }
 console.log(count)
+
+
+//char of str
+
+let greeting = "Hello"
+for (i in greeting){
+    console.log(greeting[i])
+}

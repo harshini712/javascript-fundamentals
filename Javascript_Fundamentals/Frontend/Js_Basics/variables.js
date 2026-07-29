@@ -56,4 +56,4 @@ immutable bindings that can't be reassigned, though objects can still be mutated
 const a = 5
 let b = "gfg";
 console.log(a);
-console.log(b); 
+console.log(b); */

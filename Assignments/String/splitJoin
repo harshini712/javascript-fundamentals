@@ -6,3 +6,12 @@ if(str = reverse){
 }else{
     console.log(false,",", str, "is not a palindrome")
 }
+
+//reverse each word without changing the sentence order
+
+let str1 = "Drink plenty of water"
+let words = str1.split(" ")
+
+let reversed = words.map(word=> word.split("").reverse().join("")).join(" ");
+console.log(reversed)
+

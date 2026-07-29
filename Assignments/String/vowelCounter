@@ -30,3 +30,90 @@ countConsonants(str);
 
 console.log("Number of vowels: ",countVowels(str))
 console.log("Number of consonants: ", countConsonants(str))
+
+//number counter
+
+let str = "Today is a monday"
+
+for (let i=0; i<str.length; i++){
+    let currElement = str[i]
+   let isCounted=false;
+   for (let k=0; k<i; k++){
+       if (str[k]===currElement){
+           isCounted = true;
+           break;
+        
+    }
+}
+
+if(isCounted){
+    continue;
+}
+let count = 0;
+
+for (let j=0; j<str.length; j++){
+    if ((str)[j] === currElement){
+        count++
+    }
+}
+
+console.log("Number of", currElement,"'s: ",count);
+}
+
+//most frequently occuring word
+
+
+let str = "two one's are 2 two two's are 4, two three's are 6";
+
+let words = str.toLowerCase().split(" ")
+
+let mostFreq = " ";
+let maxCount = 0;
+
+    for (let i=0; i<words.length; i++){
+        let count = 0;
+        
+        for (let j=0; j<words.length; j++){
+        if (words[i]===words[j]){
+            count++
+        }
+        }
+        if (count>maxCount){
+            maxCount = count;
+            mostFreq =  words[i];
+        }
+    }
+    console.log(`Most frequently occuring element: "${mostFreq}", it has occured ${maxCount} times`)
+
+
+
+//words in a paragraph
+
+let str = "The dog ran fast. The dog was very fast. The dog ran home. The dog barks loudly. The dog does not bite."
+
+let words = str.toLowerCase().split(" ")
+let isCounted = false;
+
+for (i=0; i<words.length; i++){
+    let currElement = words[i]
+    isCounted = false;
+    
+    for (j=0; j<i; j++){
+        if (words[i] === words[j]){
+         isCounted = true;
+            break;
+        }
+    }
+    
+    if (isCounted){
+        continue;
+    }
+    let count=0;
+    
+    for (k=0; k<words.length; k++){
+        if (words[k]=== currElement){
+            count++
+        }
+    }
+    console.log(words[i],":",count)
+}

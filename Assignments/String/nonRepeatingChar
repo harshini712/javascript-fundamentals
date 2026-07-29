@@ -17,3 +17,16 @@ for (let i = 0; i < str.length; i++) {
         break;
     }
 }
+
+//duplicate words remover
+let str = "My name is Harshini is my name";
+
+let words = str.toLowerCase().split(" ")
+let result = []
+
+for (let i=0; i<words.length; i++){
+    if (!result.includes(words[i])){
+        result.push(words[i])
+    }
+}
+console.log(result.join(" "))

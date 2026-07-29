@@ -1,0 +1,158 @@
+let arr = ['Harshini', 'Renuka', 'Sreeja', 'Praneeth', 'Pratyush', 'Aisha', 'Diya','Maya']
+
+do{
+    choice = Number(prompt(
+        "1. Add Student\n"+
+        "2. View Students\n"+
+        "3. Search Student\n"+
+        "4. Update Student\n"+
+        "5. Delete Student\n"+
+        "6. Sort Students by Name\n"+
+        "7. Find Top Scorer\n"+
+        "8. Search Students by Grade\n"+
+        "9. Exit\n"+
+        "Please choose an option: "));
+        
+        switch(choice){
+        case 1: addStudent()
+        break;
+        case 2: viewStudents()
+        break;
+        case 3: searchStudent()
+        break;
+        case 4: updateStudent()
+        break;
+        case 5: deleteStudent()
+        break;
+        case 6: sortStudent()
+        break;
+        case 7: topScorer()
+        break;
+        case 8: searchStudentByGrade()
+        break;
+        case 9: exit()
+        console.log("Exiting..")
+        break;
+        default:
+        if (choice <1 || choice >9){
+            console.log("Invalid Choice");
+        }
+        }
+}while(choice!=9);
+
+function addStudent(){
+    let name = prompt("Enter Student's name: ");
+    arr.push(name);
+    console.log("Student's name added successfully!");
+}
+
+
+function viewStudents(){
+    let i=0;
+    while(i<arr.length){
+        console.log(i+1,".",arr[i])
+        i++
+    }
+}
+
+function searchStudent(){
+    let name = (prompt("Enter the student's name: "))
+    let i=0;
+    let found = false;
+    while (i<arr.length){
+        if (arr[i].toLowerCase()===name.toLowerCase()){
+            console.log("student found.")
+            found = true;
+            break;
+        }
+        i++
+    }if (!found){
+        console.log("Student not found");
+    }
+}
+
+function updateStudent(){
+    let name=(prompt("Enter the current student name: "))
+    let newName = (prompt("Enter the new name: "))
+    let found = false;
+    let i=0;
+    while(i<arr.length){
+        if (arr[i].toLowerCase() === name.toLowerCase()) {
+            arr[i] = newName;
+            found = true;
+            console.log("Student updated successfully");
+            break;
+        } 
+        i++
+    }
+
+    if (!found) {
+        console.log("Student not found");
+    }
+}
+
+function deleteStudent(){
+    let name = prompt("Enter the student's name to delete: ");
+    let i=0;
+    let found = false;
+    
+    while (i<arr.length){
+    if (arr[i].toLowerCase() === name.toLowerCase()){
+        arr.splice(i,1);
+            console.log("Student deleted successfully!");
+            viewStudents();
+            found = true;
+            break;
+    }i++;
+    }
+}
+    
+function sortStudent() {
+
+    arr.sort();
+
+    console.log("Students sorted:");
+    console.log(arr);
+
+}
+
+function topScorer() {
+
+    let marks = [85, 92, 78, 95, 88, 90, 80, 87];
+
+    let highest = marks[0];
+    let index = 0;
+
+    for (let i = 1; i < marks.length; i++) {
+
+        if (marks[i] > highest) {
+            highest = marks[i];
+            index = i;
+        }
+    }
+
+    console.log("Top Scorer:", arr[index]);
+    console.log("Marks:", highest);
+}
+
+function searchStudentByGrade() {
+
+    let grade = prompt("Enter grade:");
+
+    let grades = ["A", "B", "A+", "A+", "B+", "A", "B", "A"];
+
+    let found = false;
+
+    for (let i = 0; i < grades.length; i++) {
+
+        if (grades[i].toLowerCase() === grade.toLowerCase()) {
+
+            console.log(arr[i], "-", grades[i]);
+            found = true;
+        }
+    }
+
+    if (!found) {
+        console.log("No students found with this grade");
+    }
+}
