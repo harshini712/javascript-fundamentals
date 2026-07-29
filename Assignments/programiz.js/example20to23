@@ -90,3 +90,40 @@ if(result1 == result2 && result1 == result3) {
 else {
     console.log(`${a}, ${b} and ${c} have different last digit.`);
 }
+
+
+
+//hcf or gcd
+
+let hcf;
+
+let num1 =Number(prompt("Enter a number 1: "));
+let num2= Number(prompt("Enter a number 2: "));
+
+for(let i=1; i<=num1 && i<=num2; i++){
+
+    if(num1%i==0 && num2%i==0){
+        hcf = i;
+    }
+}
+
+console.log("HCF: ",hcf);
+
+//lcm
+
+
+let lcm;
+
+let num1 =Number(prompt("Enter a number 1: "));
+let num2= Number(prompt("Enter a number 2: "));
+
+let largest = num1;
+if (num2 >num1){
+    largest = num2;
+}
+for (let i=largest; ;i++){
+    if (i % num1 == 0 && i % num2 == 0){
+        console.log("LCM: ", i);
+        break;
+    }
+}
