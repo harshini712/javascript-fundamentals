@@ -37,6 +37,11 @@ console.log(arr2)
     
 //frequency
 
+let freq={
+    2:1
+}
+
+
 let arr3 = [2,4,5,6,8,8,2,5,9,10];
     for (let i =0; i<arr3.length; i++){
         let count = 1;
@@ -59,7 +64,18 @@ let arr3 = [2,4,5,6,8,8,2,5,9,10];
     }
     
 
-    //missing number from 1 to N
+//using object
+// let arr = [2,4,5,6,8,8,2,5,9,10];
+// let frequency = {};
+// for (let i =0; i<arr.length; i++){
+//     let num = arr[i]
+//     frequency[num]=(frequency[num]||0)+1;
+// }
+// for(let key in frequency){
+//     console.log(key,"'s count: ", frequency[key])
+// }
+
+//missing number from 1 to N
 
 let arr4 =[1,2,3,4,5,7];
 let n=7;

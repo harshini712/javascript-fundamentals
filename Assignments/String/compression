@@ -11,3 +11,18 @@ for(i=0; i<str.length; i++){
     }
 }
 console.log(compressed)
+
+//
+let str = 'ababbacc'
+let count = {}
+
+for(i=0; i<str.length; i++){
+    char = str[i]
+    count[char]= (count[char] || 0) +1
+}
+
+let result = "";
+for (let key in count){
+    result += key+count[key]
+}
+console.log(result)
