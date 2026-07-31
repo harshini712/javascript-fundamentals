@@ -31,3 +31,17 @@ while (left<right){
 
 }
 console.log(arr)
+
+//anagram
+
+let str1 = "listen";
+let str2 = "silent";
+
+if (
+    str1.split("").sort().join("") ===
+    str2.split("").sort().join("")
+) {
+    console.log("Anagram");
+} else {
+    console.log("Not an Anagram");
+}
