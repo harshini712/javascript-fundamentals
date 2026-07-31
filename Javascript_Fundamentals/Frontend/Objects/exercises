@@ -1,0 +1,81 @@
+function Student(name, rollNo, english, maths, science) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.english = english;
+    this.maths = maths;
+    this.science = science;
+
+    this.total = function () {
+        return this.english + this.maths + this.science;
+    };
+
+    this.average = function () {
+        return this.total() / 3;
+    };
+
+    this.result = function () {
+        if (
+            this.english >= 35 &&
+            this.maths >= 35 &&
+            this.science >= 35
+        ) {
+            return "PASS";
+        }
+        return "FAIL";
+    };
+
+    this.grade = function () {
+        let avg = this.average();
+
+        if (avg >= 90) return "A";
+        else if (avg >= 75) return "B";
+        else if (avg >= 60) return "C";
+        else return "D";
+    };
+}
+
+let student = new Student("Harshini", 101, 90, 85, 95);
+
+console.log(student.total());
+console.log(student.average());
+console.log(student.result());
+console.log(student.grade());
+
+
+
+//
+
+function BankAccount(name, balance) {
+
+    this.name = name;
+    this.balance = balance;
+
+    this.deposit = function(amount) {
+        this.balance += amount;
+    };
+
+    this.withdraw = function(amount) {
+
+        if(amount <= this.balance){
+            this.balance -= amount;
+        }
+        else{
+            console.log("Insufficient Balance");
+        }
+
+    };
+
+    this.display = function(){
+        console.log(this.name);
+        console.log(this.balance);
+    };
+
+}
+
+let user = new BankAccount("Harshini",10000);
+
+user.deposit(5000);
+
+user.withdraw(3000);
+
+user.display();

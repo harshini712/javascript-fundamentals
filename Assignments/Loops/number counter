@@ -1,0 +1,124 @@
+//frequency of 4s
+
+let arr=[2,3,4,1,6,4,3,5,4,7];
+let count=0;
+for(let i=0; i<=arr.length; i++){
+    if (arr[i]=== 4){ 
+        count++
+    }   else{
+        continue;
+    }
+}
+console.log("Number of 4's : ", count);
+
+
+//frequency of 4s and 3s
+
+let arr=[2,3,4,1,6,4,3,5,4,7];
+let count=0;
+for(let i=0; i<=arr.length; i++){
+    if (arr[i]=== 4||arr[i]=== 3){ 
+        count++
+    }   else{
+        continue;
+    }
+}
+console.log("Number of 4's and 3's: ", count);
+
+//seperate frequency counter
+
+let arr=[2,3,4,1,6,4,3,5,4];
+let countOf4s=0;
+let countOf3s=0;
+let countOf2s=0;
+let countOf1s=0;
+let countOf6s=0;
+let countOf5s=0;
+for(let i=0; i<=arr.length; i++){
+    if (arr[i]=== 4){ 
+        countOf4s++
+    }   else if (arr[i]=== 3){
+        countOf3s++
+    } else if (arr[i]=== 2){
+        countOf2s++
+    }else if (arr[i]=== 1){
+        countOf1s++
+    }else if (arr[i]=== 5){
+        countOf5s++
+    }else if (arr[i]=== 6){
+        countOf6s++
+    }
+        else {
+            continue;
+    }
+}
+
+console.log("Number of 1's ", countOf1s); 
+console.log("Number of 2's ", countOf2s); 
+console.log("Number of 3's ", countOf3s); 
+console.log("Number of 4's ", countOf4s);
+console.log("Number of 5's ", countOf5s);
+console.log("Number of 6's ", countOf6s);
+
+
+//generic counter of frequencies
+
+let arr=[2,3,4,1,6,4,3,5,4];
+let filedName;
+let count=0;
+
+for(let i=0; i<arr.length; i++){
+    
+    filedName=arr[i];
+    let counted = false;
+    
+    
+    for(let k=0; k<i; k++){
+    if (arr[k] === filedName){ 
+        counted = true;
+        break;
+        
+    } 
+        
+    }
+       if (counted){
+            continue;
+    }
+    count=0;
+    
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] === filedName) {
+            count++;
+        }
+    }
+console.log(`Number of ${filedName}'s: ${count}`);
+}
+
+//another way
+
+let arr=[2,3,4,1,4,5,3,6,4];
+
+for (let i=0; i<arr.length; i++){
+    let currElement = arr[i]
+   let isCounted=false;
+   for (let k=0; k<i; k++){
+       if (arr[k]===currElement){
+           isCounted = true;
+           break;
+        
+    }
+}
+
+if(isCounted){
+    continue;
+}
+let count = 0;
+
+for (let j=0; j<arr.length; j++){
+    if (arr[j] === currElement){
+        count++
+    }
+}
+
+console.log("Number of", currElement,"'s: ",count);
+}

@@ -1,0 +1,23 @@
+function calculateHRA(basicSalary){
+   return basicSalary*0.40;
+}
+function calculatePF(basicSalary){
+    return basicSalary*0.12;
+}
+function calculateNetSalary(basicSalary){
+    const hra=calculateHRA(basicSalary);
+    const pf=calculatePF(basicSalary);
+    
+    return basicSalary+hra-pf;
+}
+const basicSalary = 30000;
+const hra=calculateHRA(basicSalary);
+const pf=calculatePF(basicSalary);
+const netSalary=calculateNetSalary(basicSalary);
+
+console.log(
+    `-------Salary Breakdown-------  
+     Basic Salary  :  Rs.${basicSalary}/-
+     HRA           :  Rs.${hra}/-
+     PF            :  Rs.${pf}/-
+     Net Salary    :  Rs.${netSalary}/-`);

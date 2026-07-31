@@ -1,0 +1,69 @@
+//hello in desired language
+
+let language = "spanish"
+
+switch(language){
+    case 'hindi':
+        console.log("Namaste");
+        break;
+    case 'telugu':
+        console.log("Namaskaram");
+        break;
+    case 'english':
+        console.log("Hello");
+        break;
+    case 'spanish':
+        console.log("Hola");
+}
+
+//month number to number of days
+
+let month = "10";
+
+switch (month){
+    case '1':
+        case '3':
+            case '5':
+            case '7':
+                case '8':
+                    case '10':
+                        case '12':
+        console.log("31");
+        break;
+    case '2':
+        console.log("28/29 days");
+        break;
+    case '4':
+    case '6':
+         case '9':
+    case '11':
+        console.log("30");
+}
+
+
+// day number to day 
+
+let day = "6";
+
+switch (day){
+    case '1':
+        console.log("Monday");
+        break;
+    case '2':
+        console.log("Tuesday");
+        break;
+    case '3':
+        console.log("Wednesday");
+        break;
+    case '4':
+        console.log("Thursday");
+        break;
+    case '5':
+        console.log("Friday");
+        break;
+    case '6':
+        console.log("Saturday");
+        break;
+    case '7':
+        console.log("Sunday");
+}

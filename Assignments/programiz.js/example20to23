@@ -1,0 +1,129 @@
+//simple calculator
+
+let a=10;
+let b=5;
+
+let addition=a+b;
+let subtraction=a-b;
+let multilication=a*b;
+let division=a/b;
+let modulus=a%b;
+let exponentiation=a**b;
+
+console.log("addition: ", a+b);
+console.log("subtraction: ", a-b);
+console.log("multiplication: ", a*b);
+console.log("division: ", a/b);
+console.log("modulus: ", a%b);
+console.log("exponentitation: ", a**b);
+
+// if, else-if, else
+
+const operator = prompt('Enter operator ( either +, -, *, /, % or ** ): ');
+
+const number1 = Number(prompt('Enter first number: '));
+const number2 = Number(prompt('Enter second number: '));
+
+let result;
+
+if (operator == '+') {
+    result = number1 + number2;
+}
+else if (operator == '-') {
+    result = number1 - number2;
+}
+else if (operator == '*') {
+    result = number1 * number2;
+}
+else if (operator == '/') {
+    result = number1 / number2;
+}
+else if (operator == '%') {
+    result = number1 % number2;
+}
+else {
+    result = number1 ** number2;
+}
+
+console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+
+//Sum of naturl numbers using for loop
+
+
+const number = Number(prompt("Enter a positive integer: "));
+
+let sum =0;
+
+for(let i=1; i<=number; i++){
+    sum+=i
+}
+console.log(sum)
+
+//using while loop
+
+const number = Number(prompt("Enter a positive integer: "));
+
+let sum =0;
+let i =1;
+
+while( i<=number){
+    sum+=i;
+    i++
+}
+console.log(sum)
+
+//if the last digit is same
+
+
+const a = prompt('Enter a first integer: ');
+const b = prompt('Enter a second integer: ');
+const c = prompt('Enter a third integer: ');
+
+const result1 = a % 10;
+const result2 = b % 10;
+const result3 = c % 10;
+
+if(result1 == result2 && result1 == result3) {
+    console.log(`${a}, ${b} and ${c} have the same last digit.`);
+}
+else {
+    console.log(`${a}, ${b} and ${c} have different last digit.`);
+}
+
+
+
+//hcf or gcd
+
+let hcf;
+
+let num1 =Number(prompt("Enter a number 1: "));
+let num2= Number(prompt("Enter a number 2: "));
+
+for(let i=1; i<=num1 && i<=num2; i++){
+
+    if(num1%i==0 && num2%i==0){
+        hcf = i;
+    }
+}
+
+console.log("HCF: ",hcf);
+
+//lcm
+
+
+let lcm;
+
+let num1 =Number(prompt("Enter a number 1: "));
+let num2= Number(prompt("Enter a number 2: "));
+
+let largest = num1;
+if (num2 >num1){
+    largest = num2;
+}
+for (let i=largest; ;i++){
+    if (i % num1 == 0 && i % num2 == 0){
+        console.log("LCM: ", i);
+        break;
+    }
+}

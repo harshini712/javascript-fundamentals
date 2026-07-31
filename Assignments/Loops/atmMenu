@@ -1,0 +1,54 @@
+// ATM Menu
+// Display a menu with options:
+// Check Balance
+// Deposit
+// Withdraw
+// Exit
+// Use a do...while loop so the menu is displayed repeatedly until the user selects Exit.
+// Update and display the balance after each transaction.
+
+
+
+let choice;
+let balance = 1000;
+
+do{
+    choice = Number(prompt(
+        "ATM Menu\n"+
+        "1. Check Balance\n"+
+        "2. Deposit\n"+
+        "3. Withdraw\n"+
+        "4. Exit\n"+
+        "Please enter your choice: "));
+        
+    switch(choice){
+    case 1:
+        console.log("Your remaining balance: ", balance);
+        break;
+    case 2:
+        let deposit = Number(prompt("Enter the amount you want to deposit: "));
+        balance = balance+deposit;
+        console.log("Your action is successful!")
+        console.log("Updated Balance: ", balance);
+        break;
+    case 3:
+        let withdrawlAmt = Number(prompt("Enter the amount you want to withdraw: "));
+        if (withdrawlAmt <= balance){
+        balance = balance-withdrawlAmt;
+        console.log("Your action is successful!")
+        console.log("Updated Balance: ", balance);
+        } else { 
+            console.log("Insufficient Balance");
+        }
+        break;
+    case 4:
+        console.log("Thankyou! Please visit soon again.");
+        break;
+    default:
+    if(choice<1 || choice >4){
+    console.log("Please enter a valid choice");
+        
+    }
+}
+}
+while (choice!==4);

@@ -1,0 +1,97 @@
+// Mini Project: Student Management System
+// Build a simple console-based Student Management System that combines all the above concepts.
+// Requirements:
+// Display a menu using a do...while loop.
+// Use a switch statement to handle menu options:
+// Add Student
+// View Students
+// Search Student
+// Delete Student
+// Exit
+// Store student names in an array.
+// Use while loops wherever appropriate (for searching or displaying data).
+// Create reusable functions for each operation (Add, View, Search, Delete).
+
+
+console.log("Student Management System");
+let arr = ["Harshini","Pratyush","Sreeja","Renuka","Praneeth"];
+let choice;
+
+do {
+    choice = Number(prompt(
+        "1. Add Student\n"+
+        "2. View Students\n"+
+        "3. Search Student\n"+
+        "4. Delete Student\n"+
+        "5. Exit\n"+
+        "Please enter a choice: "));
+    
+    switch(choice){
+        case 1: addStudent()
+        break;
+        case 2: viewStudents()
+        break;
+        case 3: searchStudent()
+        break;
+        case 4: deleteStudent()
+        break;
+        case 5: console.log("Exited.");
+        break;
+        default:
+        if (choice <1 || choice >5){
+            console.log("Invalid Choice");
+        }
+    }
+}while(choice!=5);
+
+function addStudent(){
+    let name = prompt("Enter Student's name: ");
+    arr.push(name);
+    console.log("Student's name added successfully!");
+}
+
+function viewStudents(){
+    let i=0;
+    while (i<arr.length){
+        console.log(`${i+1}.${arr[i]}`);
+        i++;
+    }
+}
+/**
+ * == 5 "5"
+ * ===
+ */
+
+function searchStudent(){
+    let name = prompt("Enter the student's name to search: ");
+    let i =0;
+    let found = false;
+    while (i<arr.length){
+        if (arr[i].toLowerCase() === name.toLowerCase()){
+            console.log("Student found.");
+            found=true;
+            break;
+        }
+        i++;
+    }if (!found) {
+            console.log("Student not found");
+        }
+    }
+function deleteStudent(){
+    let name = prompt("Enter the student's name to delete: ");
+    let i=0;
+    let found = false;
+    
+    while (i<arr.length){
+    if (arr[i].toLowerCase() === name.toLowerCase()){
+        arr.splice(i,1);
+            console.log("Student deleted successfully!");
+            viewStudents();
+            found = true;
+            break;
+    }i++;
+    }
+    if (!found) {
+        console.log("Student not found.");
+}
+}

@@ -1,0 +1,21 @@
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+
+// possible Errors: 
+
+// syntax error
+// SyntaxError: Unexpected token ']'
+
+// Reference error
+// alert("Hello World!") ReferenceError: alert is not defined
+// ReferenceError: arr is not defined
+
+
+
+// Range error
+
+
+//TypeError: mark.toUpperCase is not a function
+
+// .map = ((n)=> n.price)
+// TypeError: Cannot set properties of undefined (setting 'map')
